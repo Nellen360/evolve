@@ -1,0 +1,182 @@
+﻿@charset "utf-8";
+
+* {margin:0;padding:0;zoom:100%;border:0;}
+
+
+
+body {
+  font: 13px/20px 'Lucida Grande', Tahoma, Verdana, sans-serif;
+  background-color: #f1eeee;
+}
+
+#Header {
+	position:absolute;
+	width:100%;
+	height:110px;
+	background-color: #000;
+	margin:0px;
+	padding:0px;
+	border:none;
+}
+
+#logoLeft{
+	position:relative;
+	top:-20px;
+}
+
+#logoRight{
+	position:relative;
+	float:right;
+	right:0px;
+	top:-20px;
+}
+
+#Content{
+	position:absolute;
+	top: 110px;
+    bottom: 0;
+    width:100%;
+    overflow:auto;
+}
+
+#innerContent {
+    position:absolute;
+    left:400px;
+    top:10px;
+    bottom:0px;
+    right:0px;
+    overflow:hidden;
+}
+
+.formBox{
+	position: relative;
+	margin: 0 auto;
+	padding: 20px 20px 20px;
+	background: white;
+	border-radius: 3px;
+	-webkit-box-shadow: 0 0 200px rgba(255, 255, 255, 0.5), 0 1px 2px rgba(0, 0, 0, 0.3);
+	box-shadow: 0 0 200px rgba(255, 255, 255, 0.5), 0 1px 2px rgba(0, 0, 0, 0.3);
+	overflow:hidden;
+}
+
+.formBoxHeader{
+	margin: -20px -20px 21px;
+	line-height: 40px;
+	font-size: 15px;
+	font-weight: bold;
+	color: #555;
+	text-align: center;
+	text-shadow: 0 1px white;
+	background: #f3f3f3;
+	border-bottom: 1px solid #cfcfcf;
+	border-radius: 3px 3px 0 0;
+	background-image: -webkit-linear-gradient(top, whiteffd, #eef2f5);
+	background-image: -moz-linear-gradient(top, whiteffd, #eef2f5);
+	background-image: -o-linear-gradient(top, whiteffd, #eef2f5);
+	background-image: linear-gradient(to bottom, whiteffd, #eef2f5);
+	-webkit-box-shadow: 0 1px whitesmoke;
+	box-shadow: 0 1px whitesmoke;
+}
+
+
+.clickable:hover{
+	cursor:hand;
+  	cursor:pointer;
+}
+
+#sideMenuContainer {
+    position:absolute;
+    bottom:0px;
+    top:10px;
+    width:400px;
+    left:0px;
+    background-color:#322b2b;
+    z-index:999;
+    overflow:hidden;
+}
+
+    #sideMenuContainer #menuContent {
+        position: relative;
+        width:340px;
+        height: 100%;
+        float:left;
+        overflow-y:auto;
+        overflow-x:hidden;
+    }
+
+    #sideMenuContainer #resizeBar {
+        position: relative;
+        width: 60px;
+        height: 100%;
+        overflow: hidden;
+        float: right;
+        background-image: -webkit-linear-gradient(left, #4e4e4e, #322b2b);
+    }
+
+        #sideMenuContainer #resizeBar img {
+            position:absolute;
+            width:30px;
+            height:30px;
+            margin-left:10px;
+            top:-3px;
+            transform: rotate(-90deg);
+        }
+
+        #sideMenuContainer #resizeBar div {
+            position:absolute;
+            top:50%;
+            left:-210px;
+            width:500px;
+            height:40px;
+           -webkit-transform: rotate(-90deg);
+            text-align:center;
+            color:white;
+            overflow:hidden;
+            font-size:20px;   
+        }
+
+#navBar {
+    position:absolute;
+    height:50px;
+    bottom:0px;
+    right:0px;
+    width:100%;
+   
+}
+
+.caret {
+    padding:5px;
+    font-size:10px;
+}
+
+.tabList {
+    position:relative;
+    bottom:-10px;
+    
+}
+
+
+    .tab {
+        display:inline;
+        margin-left:1px;
+        background:black;
+        color:white;
+        font-size:18px;
+        padding:10px 15px 10px 15px;
+       bottom:0px;
+    }
+
+    .tabList .selected {
+        background:red;
+     
+
+    }
+
+.tab:hover {
+    background:red;
+}
+
+
+
+
+
