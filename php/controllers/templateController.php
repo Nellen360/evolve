@@ -57,6 +57,20 @@ class TemplateController {
         return $data;
     }
 
+    public function getDataFromFileLineByLine($path){
+        $data = array();
+
+        if (file_exists($path) ){
+            $file = fopen($path, "r") or die("Unable to open file!");
+            while(! feof($file)){
+                array_push($data, fgets($file));
+            }
+            fclose($file);
+        }
+
+        return $data;
+    }
+
 }
 
 ?>

@@ -8,8 +8,8 @@
     $controller = $id."Controller.php";
 
     //require($model);
-    require($baseDir."/php/views/".$view);
-    require($baseDir."/php/controllers/".$controller);
+    require(ROOT."/php/views/".$view);
+    require(ROOT."/php/controllers/".$controller);
 
     $controllerName = ucfirst($id)."Controller";
 

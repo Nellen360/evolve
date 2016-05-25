@@ -1,5 +1,6 @@
 <?php
-	require("config.php");
-    require($baseDir."/php/views/templateView.php");
-    require($baseDir."/php/controllers/templateController.php");
+	require(__DIR__."/config.php");
+
+    require(ROOT."/php/views/templateView.php");
+    require(ROOT."/php/controllers/templateController.php");
 ?>
