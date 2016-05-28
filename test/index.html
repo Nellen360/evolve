@@ -1,4 +1,62 @@
 <?php
-    $id="test";
-    require("../php/config/template.php"); 
+   // $id="test";
+   // require("../php/config/template.php"); 
 ?>
+<html lang="en">
+  <head>
+  	<meta charset="UTF-8">
+		
+		 <style>
+		
+			
+			
+			/* Simple slideshow (not resposive - yet) */
+			.slideshow-wrapper {
+				width:704px;
+				overflow:scroll;
+			}
+			.slideshow-wrapper ul {
+				margin:0;
+				padding:0;
+				width: 2840px; /* 710 * 4 */
+				
+			}
+			.slides .slide-image {
+				
+				display:inline-block;
+                left:0px;
+                right:0px;
+                top:0px;
+                bottom:0px;
+
+			}
+			
+			
+		 </style>
+	</head>
+	<body>	
+
+				
+				<div class="slideshow-wrapper">
+					<ul class="slides">
+						<li class="slide-image">
+                            <div>
+							<img src="http://placehold.it/700x300/333/whitesmoke&text=Slide%20+%20n1" />
+                                </div>
+						</li>
+						<li class="slide-image">
+							<img src="http://placehold.it/700x300/5954EB/333&text=Slide%20+%20n1&text=slide+n2" />
+						</li>
+						<li class="slide-image">
+							<img src="http://placehold.it/700x300/49B853/ffffff&text=Slide%20+%20n3" />
+						</li>
+						<li class="slide-image">
+							<img src="http://placehold.it/700x300/CF69CF/ffffff&text=Slide%20+%20n4" />
+						</li>
+					</ul>
+				</div>
+				
+				
+
+	</body>
+</html>

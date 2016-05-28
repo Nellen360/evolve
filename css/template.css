@@ -6,9 +6,16 @@
 
 body {
   font: 13px/20px 'Lucida Grande', Tahoma, Verdana, sans-serif;
-  background-color: #f1eeee;
+  background-color: #322b2b;/*#f1eeee;*/
 }
 
+#logo {
+    position:absolute;
+    z-index:11;
+    height:200px;
+    width:200px;
+    left:20px;
+}
 #Header {
 	position:absolute;
 	width:100%;
@@ -19,17 +26,7 @@ body {
 	border:none;
 }
 
-#logoLeft{
-	position:relative;
-	top:-20px;
-}
 
-#logoRight{
-	position:relative;
-	float:right;
-	right:0px;
-	top:-20px;
-}
 
 #Content{
 	position:absolute;
@@ -141,7 +138,7 @@ body {
     bottom:0px;
     right:0px;
     width:100%;
-   
+
 }
 
 .caret {
@@ -152,7 +149,7 @@ body {
 .tabList {
     position:relative;
     bottom:-10px;
-    
+       float:right;
 }
 
 
@@ -176,7 +173,121 @@ body {
     background:red;
 }
 
+.contentSlider {
+    position:absolute;
+    width:100%;
+    height:100%;
+}
+
+.sliderNavigation {
+    position:absolute;
+    width:100%;
+    height:100%;
+    z-index:10;
+}
+
+.leftSliderArrowContainer {
+    position:relative;
+    height:100%;
+    width:150px;
+    left:0px;
+    float:left;
+}
+
+    .leftSliderArrowContainer:hover {
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .leftSliderArrowContainer img {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width:50px;
+        height:50px;
+        right:50px;
+    }
+
+.rightSliderArrowContainer {
+    position:relative;
+    height:100%;
+    width:150px;
+    right:0px;
+    float:right;
+}
+
+.rightSliderArrowContainer:hover {
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .rightSliderArrowContainer img {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width:50px;
+        height:50px;
+        left:50px;
+    }
+
+.sliderNavBar {
+    position:absolute;
+    width:100%;
+    height:100px;
+    bottom:0px;
+    left:0px;
+    text-align:center;
+}
+
+.navDotsContainer {
+    height:100%;
+    display:inline-block;
+}
+
+.sliderDot {
+    height:20px;
+    width:20px;
+    background-image:url("../images/dot.png");
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
+    display:inline-block;
+}
+
+.sliderDotHighlighted {
+    background-image:url("../images/highlightedDot.png");
+}
 
 
+    .sliderDot:hover {
+        background-image:url("../images/highlightedDot.png");
+    }
 
+		
+
+.sliderSlideCollection {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow:scroll;
+}
+
+.slideList {
+    width: 10840px;
+}
+
+.sliderSlide {
+    display:inline-block;
+    height:calc(100vh-110px);
+    width:100vw;
+
+}
+
+    .sliderSlide div {
+        height:100%;
+        width:100%;
+    }
+
+     .sliderSlide img {
+         height:100%;
+        width:100%;
+    }
+      
 

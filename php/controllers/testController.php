@@ -10,7 +10,7 @@ class testController {
         $template = new TemplateController;
 
         $menuList = $template->getDataFromFileLineByLine(ROOT."/our_work/tabMenuList.txt");
-        var_dump($menuList);
+       // var_dump($menuList);
 
 
     

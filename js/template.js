@@ -1,5 +1,6 @@
 $(function () {
     selectCurrentNavTab();
+    initAllSlideShows();
 });
 
 function cloneObj(obj) {
@@ -152,4 +153,29 @@ function showDropDown(tab) {
 
     }
 }
+
+function initAllSlideShows() {
+    var slideShows = $(".contentSlider");
+    console.log(slideShows);
+    for (var i = 0; i < slideShows.length; i++) {
+        var list = $(slideShows[i]).find(".slideList")[0];
+        var listItems = ($(list).find("li").length > 0) ? $(list).find("li").length:1;
+        var windowW = window.innerWidth;
+        list.style.width = (windowW * listItems) + "px";
+    }
+}
+
+function navigateSlider() {
+    var target = window.event.target || window.event.srcElement;
+    var distance = window.innerWidth;
+    if (target.className == "leftSliderArrowContainer") {
+        $("#" + id + " .sliderSlideCollection").animate({ scrollLeft: distance + "px" });
+    } else if (target.className == "rightSliderArrowContainer") {
+        $("#" + id + " .sliderSlideCollection").animate({ scrollRight: distance + "px" });
+    }
+}
+
+
+
+
 

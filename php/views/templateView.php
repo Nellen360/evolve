@@ -30,7 +30,7 @@ class TemplateView{
 
     public function openHead(){
         echo '  <head>';
-        echo '      <meta charset="UTF-8">';
+        echo '      <meta charset="windows-1252">';
         echo '      <meta name="author" content="Ellen Alton">';
         echo '      <base href="http://localhost/evolvefila/" target="_blank">';
     }
@@ -56,7 +56,9 @@ class TemplateView{
     }
 
     public function addHeader(){
+
         echo '      <div id="Header">';
+        echo '          <img id="logo" src="images/logo.png">';
         echo '          <div id="navBar" class="tabContainer">';
         echo '              <ul class="tabList clickable">';
         echo '                  <li class="tab" onclick="selectNavTab()" data-link="our_work">Our Work <span class="caret">&#9660</span></li>';
@@ -69,12 +71,39 @@ class TemplateView{
         echo '              </ul>';
         echo '          </div>';
     	echo '      </div>';
+        
     }
 
     public function openContent(){
         echo '      <div id="Content">';
     }
 
+    public function openContentSlider($id){
+        echo '<div id ='.$id.' class="contentSlider">';
+        echo '  <div class="sliderNavigation">';
+        echo '      <div class="leftSliderArrowContainer" onclick="navigateSlider()">';
+        echo '          <img src="images/sliderArrowLeft.png">';
+        echo '      </div>';
+        echo '      <div class="rightSliderArrowContainer" onclick="navigateSlider()">';
+        echo '          <img src="images/sliderArrowRight.png">';
+        echo '      </div>';
+        echo '      <div class="sliderNavBar">';
+        echo '          <div class="navDotsContainer">';
+        echo '              <div class="sliderDot sliderDotHighlighted" data-slide="1"></div>';
+        echo '              <div class="sliderDot" data-slide="2"></div>';
+        echo '              <div class="sliderDot" data-slide="3"></div>';
+        echo '          </div>';
+        echo '      </div>';
+        echo '  </div>';
+        echo '  <div class="sliderSlideCollection">';
+        echo '      <ul class="slideList">';
+    }
+
+    public function closeContentSlider(){
+        echo '      </ul>';
+        echo '  </div>';
+        echo '</div>';
+    }
 
     public function closeContent(){
         echo '      </div>';
