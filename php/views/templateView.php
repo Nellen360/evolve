@@ -32,7 +32,7 @@ class TemplateView{
         echo '  <head>';
         echo '      <meta charset="windows-1252">';
         echo '      <meta name="author" content="Ellen Alton">';
-        echo '      <base href="http://localhost/evolvefila/" target="_blank">';
+        echo '      <base href="http://evolvefila.helix-tech.co.uk/" target="_blank">';
     }
 
     public function addTitle($title){

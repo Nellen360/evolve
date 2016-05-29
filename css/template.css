@@ -12,9 +12,10 @@ body {
 #logo {
     position:absolute;
     z-index:11;
-    height:200px;
-    width:200px;
-    left:20px;
+    height:400px;
+    width:400px;
+    left:-70px;
+    top:-70px;
 }
 #Header {
 	position:absolute;
@@ -138,7 +139,7 @@ body {
     bottom:0px;
     right:0px;
     width:100%;
-
+    
 }
 
 .caret {
@@ -149,7 +150,7 @@ body {
 .tabList {
     position:relative;
     bottom:-10px;
-       float:right;
+    float:right;
 }
 
 
@@ -266,7 +267,7 @@ body {
     position: relative;
     width: 100%;
     height: 100%;
-    overflow:scroll;
+    overflow:hidden;
 }
 
 .slideList {

@@ -8,7 +8,7 @@ function cloneObj(obj) {
 }
 
 function onWindowResize() {
-
+    initAllSlideShows();
 }
 
 function setIframeHeight(id) {
@@ -112,10 +112,10 @@ function selectNavTab(page) {
 
     var page = $(tab).data('link');
     if (page != undefined) {
-        page = "../evolvefila/" + page;
+        page = "../" + page;
 
     } else {
-        page = "../evolvefila";
+        page = "../";
     }
     window.location.href = page;
 
@@ -162,20 +162,55 @@ function initAllSlideShows() {
         var listItems = ($(list).find("li").length > 0) ? $(list).find("li").length:1;
         var windowW = window.innerWidth;
         list.style.width = (windowW * listItems) + "px";
+
+        $($(slideShows[i]).find(".leftSliderArrowContainer")[0]).hide();
+        $($(slideShows[i]).find(".rightSliderArrowContainer")[0]).show();
     }
 }
 
 function navigateSlider() {
     var target = window.event.target || window.event.srcElement;
     var distance = window.innerWidth;
-    if (target.className == "leftSliderArrowContainer") {
-        $("#" + id + " .sliderSlideCollection").animate({ scrollLeft: distance + "px" });
-    } else if (target.className == "rightSliderArrowContainer") {
-        $("#" + id + " .sliderSlideCollection").animate({ scrollRight: distance + "px" });
+    var slideShow = document.getElementById($(target).closest(".contentSlider").attr('id'));
+    var sliderCollection = $(slideShow).find(".sliderSlideCollection")[0];
+    var scrollPos = $(sliderCollection).scrollLeft();
+    
+    if (target.className == "leftSliderArrowContainer" || target.parentElement.className == "leftSliderArrowContainer") {
+        scrollPos = (scrollPos - distance);
+    } else if (target.className == "rightSliderArrowContainer" || target.parentElement.className == "rightSliderArrowContainer") {
+        scrollPos = (scrollPos + distance);
+    }
+
+    $(sliderCollection).animate({ scrollLeft: scrollPos + "px" });
+    
+    var scrollEnd = (sliderCollection.scrollWidth)-distance;
+
+    var leftNav = $(slideShow).find(".leftSliderArrowContainer")[0];
+    var rightNav = $(slideShow).find(".rightSliderArrowContainer")[0];
+
+    if (scrollPos == scrollEnd) {
+        $(leftNav).show();
+        $(rightNav).hide();
+    } else if (scrollPos == 0) {
+        $(leftNav).hide();
+        $(rightNav).show();
+    } else {
+        $(leftNav).show();
+        $(rightNav).show();
     }
 }
 
+function getSlide() {
+    var distance = window.innerWidth;
+}
 
+function setSlide(num) {
+
+}
+
+function createSliderNavDot(id) {
+
+}
 
 
 
